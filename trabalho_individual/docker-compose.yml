@@ -51,6 +51,12 @@ services:
 
   chat-service:
     container_name: chat-service
+    build: 
+      context: ./chat-service
+    depends_on:
+      - chat-service-db
+    ports:
+      - 7100:7100
 
   users-service:
     container_name: users-service
