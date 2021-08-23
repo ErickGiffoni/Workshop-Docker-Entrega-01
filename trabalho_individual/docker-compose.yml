@@ -28,4 +28,10 @@ services:
     depends_on:
       - chat-service-db
       - users-service-db
+
+  api-gateway:
+    container_name: api-gateway
+    build:
+      context: ./api-gateway
+    
     
