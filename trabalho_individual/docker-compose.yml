@@ -34,4 +34,11 @@ services:
     build:
       context: ./api-gateway
     
-    
+  chat-app:
+    container_name: chat-app
+
+  chat-service:
+    container_name: chat-service
+
+  users-service:
+    container_name: users-service
