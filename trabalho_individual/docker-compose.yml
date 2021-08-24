@@ -8,6 +8,8 @@ services:
       MYSQL_DATABASE: db
     ports: 
       - 7201:3306
+    volumes:
+      - chat-app-data:/var/lib/mysql
 
   chat-service-db:
     image: mysql:5.7.20
@@ -17,6 +19,8 @@ services:
       MYSQL_DATABASE: db
     ports: 
       - 7200:3306
+    volumes:
+      - chat-app-data:/var/lib/mysql
 
   phpmyadmin:
     container_name: phpmyadmin
@@ -66,3 +70,6 @@ services:
       - users-service-db
     ports:
       - 7101:7101
+
+volumes:
+  chat-app-data:
