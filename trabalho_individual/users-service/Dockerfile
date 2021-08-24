@@ -8,4 +8,4 @@ RUN yarn
 
 EXPOSE 7101
 
-CMD yarn watch
+CMD yarn db:migrate; yarn watch
