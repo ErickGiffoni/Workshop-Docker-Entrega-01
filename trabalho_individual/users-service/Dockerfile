@@ -6,6 +6,6 @@ COPY . /users-service/
 
 RUN yarn
 
-EXPOSE 7101
+COPY . /users-service/
 
-CMD yarn db:migrate; yarn watch
+EXPOSE 7101
